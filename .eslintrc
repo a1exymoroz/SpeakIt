@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "linebreak-style": 0,
+    "no-new": 0,
+    "no-param-reassign": 0,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "no-debugger": 0,
+    "class-methods-use-this": 0,
+    "no-restricted-globals": 0,
+    "new-cap": 0,
+    "no-undef": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
