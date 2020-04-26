@@ -85,19 +85,6 @@
 
 /* Radio button */
 
-.start__wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-}
-
 .result__wrapper {
   position: absolute;
   width: 100%;
@@ -147,6 +134,8 @@ p {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .main_word {

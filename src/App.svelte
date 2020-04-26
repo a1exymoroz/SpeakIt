@@ -5,8 +5,7 @@
   let wordTranslate = '';
   let speakResult = '';
   let isRecognizing = false;
-  let isStartOpen = false;
-  let isResultOpen = true;
+  let isResultOpen = false;
   let pageRequest = 0;
   let groupRequest = 0;
   let pageRequestNumbers = [0, 1, 2, 3, 4, 5];
@@ -18,6 +17,9 @@
     if (index !== -1) {
       imgSrc = words[index].image;
       words[index].active = true;
+    }
+    if (words.every((element) => element.active)) {
+      onShowResults();
     }
   };
 
@@ -84,6 +86,7 @@
   const onStartRecognition = () => {
     recognition.start();
     isRecognizing = true;
+    imgSrc = firstPicture;
   };
 
   const resetRecognition = () => {
@@ -100,10 +103,7 @@
   const onShowResults = () => {
     resetRecognition();
     isResultOpen = true;
-  };
-
-  const onStartClick = () => {
-    isStartOpen = false;
+    document.body.style.overflow = 'hidden';
   };
 
   const onClickLevelOfWords = (number) => {
@@ -117,6 +117,12 @@
     resetData();
     groupRequest++;
     setWords(pageRequest, groupRequest);
+    document.body.style.overflow = 'auto';
+  };
+
+  const onClickReturn = () => {
+    isResultOpen = false;
+    document.body.style.overflow = 'auto';
   };
 
   setWords(pageRequest, groupRequest);
@@ -125,11 +131,7 @@
   $: wrongAnswers = words.filter((element) => !element.active);
 </script>
 
-{#if isStartOpen}
-<div class="start__wrapper">
-  <button class="myButton" on:click="{onStartClick}">Start</button>
-</div>
-{/if} {#if isResultOpen}
+{#if isResultOpen}
 <div class="result__wrapper">
   <div class="result__blocks">
     <h3>&#9989; Correct</h3>
@@ -184,7 +186,7 @@
   </div>
 
   <div>
-    <button class="myButton" on:click="{() => isResultOpen = false}">Return</button>
+    <button class="myButton" on:click="{() => onClickReturn()}">Return</button>
     <button class="myButton" on:click="{() => onNewGameStart()}">New game</button>
   </div>
 </div>

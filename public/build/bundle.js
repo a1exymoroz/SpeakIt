@@ -451,69 +451,29 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[30] = list[i];
+    	child_ctx[29] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[33] = list[i];
+    	child_ctx[32] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[36] = list[i];
+    	child_ctx[35] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[41] = list[i];
+    	child_ctx[40] = list[i];
     	return child_ctx;
     }
 
-    // (128:0) {#if isStartOpen}
-    function create_if_block_5(ctx) {
-    	let div;
-    	let button;
-    	let dispose;
-
-    	const block = {
-    		c: function create() {
-    			div = element("div");
-    			button = element("button");
-    			button.textContent = "Start";
-    			attr_dev(button, "class", "myButton svelte-vas4q4");
-    			add_location(button, file, 129, 2, 3333);
-    			attr_dev(div, "class", "start__wrapper svelte-vas4q4");
-    			add_location(div, file, 128, 0, 3302);
-    		},
-    		m: function mount(target, anchor, remount) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, button);
-    			if (remount) dispose();
-    			dispose = listen_dev(button, "click", /*onStartClick*/ ctx[16], false, false, false);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    			dispose();
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_5.name,
-    		type: "if",
-    		source: "(128:0) {#if isStartOpen}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (132:6) {#if isResultOpen}
+    // (134:0) {#if isResultOpen}
     function create_if_block_2(ctx) {
     	let div3;
     	let div0;
@@ -533,8 +493,8 @@ var app = (function () {
     	let t9;
     	let button1;
     	let dispose;
-    	let if_block0 = !/*correctAnswers*/ ctx[8].length && create_if_block_4(ctx);
-    	let each_value_3 = /*correctAnswers*/ ctx[8];
+    	let if_block0 = !/*correctAnswers*/ ctx[7].length && create_if_block_4(ctx);
+    	let each_value_3 = /*correctAnswers*/ ctx[7];
     	validate_each_argument(each_value_3);
     	let each_blocks_1 = [];
 
@@ -542,8 +502,8 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
     	}
 
-    	let if_block1 = !/*wrongAnswers*/ ctx[9].length && create_if_block_3(ctx);
-    	let each_value_2 = /*wrongAnswers*/ ctx[9];
+    	let if_block1 = !/*wrongAnswers*/ ctx[8].length && create_if_block_3(ctx);
+    	let each_value_2 = /*wrongAnswers*/ ctx[8];
     	validate_each_argument(each_value_2);
     	let each_blocks = [];
 
@@ -586,25 +546,25 @@ var app = (function () {
     			t9 = space();
     			button1 = element("button");
     			button1.textContent = "New game";
-    			attr_dev(h30, "class", "svelte-vas4q4");
-    			add_location(h30, file, 134, 4, 3496);
-    			attr_dev(ul0, "class", "svelte-vas4q4");
-    			add_location(ul0, file, 138, 4, 3585);
-    			attr_dev(div0, "class", "result__blocks svelte-vas4q4");
-    			add_location(div0, file, 133, 2, 3463);
-    			attr_dev(h31, "class", "svelte-vas4q4");
-    			add_location(h31, file, 160, 4, 4237);
-    			attr_dev(ul1, "class", "svelte-vas4q4");
-    			add_location(ul1, file, 164, 4, 4323);
-    			attr_dev(div1, "class", "result__blocks svelte-vas4q4");
-    			add_location(div1, file, 159, 2, 4204);
-    			attr_dev(button0, "class", "myButton svelte-vas4q4");
-    			add_location(button0, file, 186, 4, 4940);
-    			attr_dev(button1, "class", "myButton svelte-vas4q4");
-    			add_location(button1, file, 187, 4, 5025);
-    			add_location(div2, file, 185, 2, 4930);
-    			attr_dev(div3, "class", "result__wrapper svelte-vas4q4");
-    			add_location(div3, file, 132, 0, 3431);
+    			attr_dev(h30, "class", "svelte-1grd79w");
+    			add_location(h30, file, 136, 4, 3583);
+    			attr_dev(ul0, "class", "svelte-1grd79w");
+    			add_location(ul0, file, 140, 4, 3672);
+    			attr_dev(div0, "class", "result__blocks svelte-1grd79w");
+    			add_location(div0, file, 135, 2, 3550);
+    			attr_dev(h31, "class", "svelte-1grd79w");
+    			add_location(h31, file, 162, 4, 4324);
+    			attr_dev(ul1, "class", "svelte-1grd79w");
+    			add_location(ul1, file, 166, 4, 4410);
+    			attr_dev(div1, "class", "result__blocks svelte-1grd79w");
+    			add_location(div1, file, 161, 2, 4291);
+    			attr_dev(button0, "class", "myButton svelte-1grd79w");
+    			add_location(button0, file, 188, 4, 5027);
+    			attr_dev(button1, "class", "myButton svelte-1grd79w");
+    			add_location(button1, file, 189, 4, 5107);
+    			add_location(div2, file, 187, 2, 5017);
+    			attr_dev(div3, "class", "result__wrapper svelte-1grd79w");
+    			add_location(div3, file, 134, 0, 3518);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, div3, anchor);
@@ -639,12 +599,12 @@ var app = (function () {
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(button0, "click", /*click_handler*/ ctx[27], false, false, false),
-    				listen_dev(button1, "click", /*click_handler_1*/ ctx[28], false, false, false)
+    				listen_dev(button0, "click", /*click_handler*/ ctx[26], false, false, false),
+    				listen_dev(button1, "click", /*click_handler_1*/ ctx[27], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (!/*correctAnswers*/ ctx[8].length) {
+    			if (!/*correctAnswers*/ ctx[7].length) {
     				if (!if_block0) {
     					if_block0 = create_if_block_4(ctx);
     					if_block0.c();
@@ -655,8 +615,8 @@ var app = (function () {
     				if_block0 = null;
     			}
 
-    			if (dirty[0] & /*onClickWord, correctAnswers, getTranslate*/ 6400) {
-    				each_value_3 = /*correctAnswers*/ ctx[8];
+    			if (dirty[0] & /*onClickWord, correctAnswers, getTranslate*/ 3200) {
+    				each_value_3 = /*correctAnswers*/ ctx[7];
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -679,7 +639,7 @@ var app = (function () {
     				each_blocks_1.length = each_value_3.length;
     			}
 
-    			if (!/*wrongAnswers*/ ctx[9].length) {
+    			if (!/*wrongAnswers*/ ctx[8].length) {
     				if (!if_block1) {
     					if_block1 = create_if_block_3(ctx);
     					if_block1.c();
@@ -690,8 +650,8 @@ var app = (function () {
     				if_block1 = null;
     			}
 
-    			if (dirty[0] & /*onClickWord, wrongAnswers, getTranslate*/ 6656) {
-    				each_value_2 = /*wrongAnswers*/ ctx[9];
+    			if (dirty[0] & /*onClickWord, wrongAnswers, getTranslate*/ 3328) {
+    				each_value_2 = /*wrongAnswers*/ ctx[8];
     				validate_each_argument(each_value_2);
     				let i;
 
@@ -728,14 +688,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(132:6) {#if isResultOpen}",
+    		source: "(134:0) {#if isResultOpen}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (136:4) {#if !correctAnswers.length}
+    // (138:4) {#if !correctAnswers.length}
     function create_if_block_4(ctx) {
     	let p;
 
@@ -743,8 +703,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Empty";
-    			attr_dev(p, "class", "svelte-vas4q4");
-    			add_location(p, file, 136, 4, 3558);
+    			attr_dev(p, "class", "svelte-1grd79w");
+    			add_location(p, file, 138, 4, 3645);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -758,18 +718,18 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(136:4) {#if !correctAnswers.length}",
+    		source: "(138:4) {#if !correctAnswers.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (151:8) {:catch error}
+    // (153:8) {:catch error}
     function create_catch_block_1(ctx) {
     	let span;
     	let t0;
-    	let t1_value = /*error*/ ctx[40].message + "";
+    	let t1_value = /*error*/ ctx[39].message + "";
     	let t1;
 
     	const block = {
@@ -777,7 +737,7 @@ var app = (function () {
     			span = element("span");
     			t0 = text("Something went wrong: ");
     			t1 = text(t1_value);
-    			add_location(span, file, 152, 8, 4088);
+    			add_location(span, file, 154, 8, 4175);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -785,7 +745,7 @@ var app = (function () {
     			append_dev(span, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*correctAnswers*/ 256 && t1_value !== (t1_value = /*error*/ ctx[40].message + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*correctAnswers*/ 128 && t1_value !== (t1_value = /*error*/ ctx[39].message + "")) set_data_dev(t1, t1_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -796,31 +756,31 @@ var app = (function () {
     		block,
     		id: create_catch_block_1.name,
     		type: "catch",
-    		source: "(151:8) {:catch error}",
+    		source: "(153:8) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:8) {:then value}
+    // (150:8) {:then value}
     function create_then_block_1(ctx) {
     	let span;
-    	let t_value = /*value*/ ctx[39] + "";
+    	let t_value = /*value*/ ctx[38] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			span = element("span");
     			t = text(t_value);
-    			add_location(span, file, 149, 8, 3998);
+    			add_location(span, file, 151, 8, 4085);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
     			append_dev(span, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*correctAnswers*/ 256 && t_value !== (t_value = /*value*/ ctx[39] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*correctAnswers*/ 128 && t_value !== (t_value = /*value*/ ctx[38] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -831,14 +791,14 @@ var app = (function () {
     		block,
     		id: create_then_block_1.name,
     		type: "then",
-    		source: "(148:8) {:then value}",
+    		source: "(150:8) {:then value}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:49)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}
+    // (147:49)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}
     function create_pending_block_1(ctx) {
     	let span;
 
@@ -846,7 +806,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = "waiting...";
-    			add_location(span, file, 146, 8, 3905);
+    			add_location(span, file, 148, 8, 3992);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -861,24 +821,24 @@ var app = (function () {
     		block,
     		id: create_pending_block_1.name,
     		type: "pending",
-    		source: "(145:49)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}",
+    		source: "(147:49)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (140:6) {#each correctAnswers as correctAnswer}
+    // (142:6) {#each correctAnswers as correctAnswer}
     function create_each_block_3(ctx) {
     	let li;
     	let span0;
     	let t1;
     	let span1;
-    	let t2_value = /*correctAnswer*/ ctx[41].word + "";
+    	let t2_value = /*correctAnswer*/ ctx[40].word + "";
     	let t2;
     	let t3;
     	let span2;
-    	let t4_value = /*correctAnswer*/ ctx[41].transcription + "";
+    	let t4_value = /*correctAnswer*/ ctx[40].transcription + "";
     	let t4;
     	let t5;
     	let promise;
@@ -892,11 +852,11 @@ var app = (function () {
     		pending: create_pending_block_1,
     		then: create_then_block_1,
     		catch: create_catch_block_1,
-    		value: 39,
-    		error: 40
+    		value: 38,
+    		error: 39
     	};
 
-    	handle_promise(promise = /*getTranslate*/ ctx[11](/*correctAnswer*/ ctx[41].word), info);
+    	handle_promise(promise = /*getTranslate*/ ctx[10](/*correctAnswer*/ ctx[40].word), info);
 
     	const block = {
     		c: function create() {
@@ -912,11 +872,11 @@ var app = (function () {
     			t5 = space();
     			info.block.c();
     			t6 = space();
-    			add_location(span0, file, 141, 8, 3695);
-    			add_location(span1, file, 142, 8, 3726);
-    			add_location(span2, file, 143, 8, 3768);
-    			attr_dev(li, "class", "svelte-vas4q4");
-    			add_location(li, file, 140, 6, 3642);
+    			add_location(span0, file, 143, 8, 3782);
+    			add_location(span1, file, 144, 8, 3813);
+    			add_location(span2, file, 145, 8, 3855);
+    			attr_dev(li, "class", "svelte-1grd79w");
+    			add_location(li, file, 142, 6, 3729);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, li, anchor);
@@ -938,7 +898,7 @@ var app = (function () {
     				li,
     				"click",
     				function () {
-    					if (is_function(/*onClickWord*/ ctx[12](/*correctAnswer*/ ctx[41]))) /*onClickWord*/ ctx[12](/*correctAnswer*/ ctx[41]).apply(this, arguments);
+    					if (is_function(/*onClickWord*/ ctx[11](/*correctAnswer*/ ctx[40]))) /*onClickWord*/ ctx[11](/*correctAnswer*/ ctx[40]).apply(this, arguments);
     				},
     				false,
     				false,
@@ -947,13 +907,13 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*correctAnswers*/ 256 && t2_value !== (t2_value = /*correctAnswer*/ ctx[41].word + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*correctAnswers*/ 256 && t4_value !== (t4_value = /*correctAnswer*/ ctx[41].transcription + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*correctAnswers*/ 128 && t2_value !== (t2_value = /*correctAnswer*/ ctx[40].word + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*correctAnswers*/ 128 && t4_value !== (t4_value = /*correctAnswer*/ ctx[40].transcription + "")) set_data_dev(t4, t4_value);
     			info.ctx = ctx;
 
-    			if (dirty[0] & /*correctAnswers*/ 256 && promise !== (promise = /*getTranslate*/ ctx[11](/*correctAnswer*/ ctx[41].word)) && handle_promise(promise, info)) ; else {
+    			if (dirty[0] & /*correctAnswers*/ 128 && promise !== (promise = /*getTranslate*/ ctx[10](/*correctAnswer*/ ctx[40].word)) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[39] = info.resolved;
+    				child_ctx[38] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
     		},
@@ -970,14 +930,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(140:6) {#each correctAnswers as correctAnswer}",
+    		source: "(142:6) {#each correctAnswers as correctAnswer}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (162:4) {#if !wrongAnswers.length}
+    // (164:4) {#if !wrongAnswers.length}
     function create_if_block_3(ctx) {
     	let p;
 
@@ -985,8 +945,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Empty";
-    			attr_dev(p, "class", "svelte-vas4q4");
-    			add_location(p, file, 162, 4, 4296);
+    			attr_dev(p, "class", "svelte-1grd79w");
+    			add_location(p, file, 164, 4, 4383);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1000,18 +960,18 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(162:4) {#if !wrongAnswers.length}",
+    		source: "(164:4) {#if !wrongAnswers.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (177:8) {:catch error}
+    // (179:8) {:catch error}
     function create_catch_block(ctx) {
     	let span;
     	let t0;
-    	let t1_value = /*error*/ ctx[40].message + "";
+    	let t1_value = /*error*/ ctx[39].message + "";
     	let t1;
 
     	const block = {
@@ -1019,7 +979,7 @@ var app = (function () {
     			span = element("span");
     			t0 = text("Something went wrong: ");
     			t1 = text(t1_value);
-    			add_location(span, file, 178, 8, 4814);
+    			add_location(span, file, 180, 8, 4901);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -1027,7 +987,7 @@ var app = (function () {
     			append_dev(span, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*wrongAnswers*/ 512 && t1_value !== (t1_value = /*error*/ ctx[40].message + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*wrongAnswers*/ 256 && t1_value !== (t1_value = /*error*/ ctx[39].message + "")) set_data_dev(t1, t1_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -1038,31 +998,31 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(177:8) {:catch error}",
+    		source: "(179:8) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:8) {:then value}
+    // (176:8) {:then value}
     function create_then_block(ctx) {
     	let span;
-    	let t_value = /*value*/ ctx[39] + "";
+    	let t_value = /*value*/ ctx[38] + "";
     	let t;
 
     	const block = {
     		c: function create() {
     			span = element("span");
     			t = text(t_value);
-    			add_location(span, file, 175, 8, 4724);
+    			add_location(span, file, 177, 8, 4811);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
     			append_dev(span, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*wrongAnswers*/ 512 && t_value !== (t_value = /*value*/ ctx[39] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*wrongAnswers*/ 256 && t_value !== (t_value = /*value*/ ctx[38] + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(span);
@@ -1073,14 +1033,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(174:8) {:then value}",
+    		source: "(176:8) {:then value}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (171:47)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}
+    // (173:47)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}
     function create_pending_block(ctx) {
     	let span;
 
@@ -1088,7 +1048,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = "waiting...";
-    			add_location(span, file, 172, 8, 4631);
+    			add_location(span, file, 174, 8, 4718);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -1103,24 +1063,24 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(171:47)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}",
+    		source: "(173:47)          <!-- promise is pending -->         <span>waiting...</span>         {:then value}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (166:6) {#each wrongAnswers as wrongAnswer}
+    // (168:6) {#each wrongAnswers as wrongAnswer}
     function create_each_block_2(ctx) {
     	let li;
     	let span0;
     	let t1;
     	let span1;
-    	let t2_value = /*wrongAnswer*/ ctx[36].word + "";
+    	let t2_value = /*wrongAnswer*/ ctx[35].word + "";
     	let t2;
     	let t3;
     	let span2;
-    	let t4_value = /*wrongAnswer*/ ctx[36].transcription + "";
+    	let t4_value = /*wrongAnswer*/ ctx[35].transcription + "";
     	let t4;
     	let t5;
     	let promise;
@@ -1134,11 +1094,11 @@ var app = (function () {
     		pending: create_pending_block,
     		then: create_then_block,
     		catch: create_catch_block,
-    		value: 39,
-    		error: 40
+    		value: 38,
+    		error: 39
     	};
 
-    	handle_promise(promise = /*getTranslate*/ ctx[11](/*wrongAnswer*/ ctx[36].word), info);
+    	handle_promise(promise = /*getTranslate*/ ctx[10](/*wrongAnswer*/ ctx[35].word), info);
 
     	const block = {
     		c: function create() {
@@ -1154,11 +1114,11 @@ var app = (function () {
     			t5 = space();
     			info.block.c();
     			t6 = space();
-    			add_location(span0, file, 167, 8, 4427);
-    			add_location(span1, file, 168, 8, 4458);
-    			add_location(span2, file, 169, 8, 4498);
-    			attr_dev(li, "class", "svelte-vas4q4");
-    			add_location(li, file, 166, 6, 4376);
+    			add_location(span0, file, 169, 8, 4514);
+    			add_location(span1, file, 170, 8, 4545);
+    			add_location(span2, file, 171, 8, 4585);
+    			attr_dev(li, "class", "svelte-1grd79w");
+    			add_location(li, file, 168, 6, 4463);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, li, anchor);
@@ -1180,7 +1140,7 @@ var app = (function () {
     				li,
     				"click",
     				function () {
-    					if (is_function(/*onClickWord*/ ctx[12](/*wrongAnswer*/ ctx[36]))) /*onClickWord*/ ctx[12](/*wrongAnswer*/ ctx[36]).apply(this, arguments);
+    					if (is_function(/*onClickWord*/ ctx[11](/*wrongAnswer*/ ctx[35]))) /*onClickWord*/ ctx[11](/*wrongAnswer*/ ctx[35]).apply(this, arguments);
     				},
     				false,
     				false,
@@ -1189,13 +1149,13 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*wrongAnswers*/ 512 && t2_value !== (t2_value = /*wrongAnswer*/ ctx[36].word + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*wrongAnswers*/ 512 && t4_value !== (t4_value = /*wrongAnswer*/ ctx[36].transcription + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*wrongAnswers*/ 256 && t2_value !== (t2_value = /*wrongAnswer*/ ctx[35].word + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*wrongAnswers*/ 256 && t4_value !== (t4_value = /*wrongAnswer*/ ctx[35].transcription + "")) set_data_dev(t4, t4_value);
     			info.ctx = ctx;
 
-    			if (dirty[0] & /*wrongAnswers*/ 512 && promise !== (promise = /*getTranslate*/ ctx[11](/*wrongAnswer*/ ctx[36].word)) && handle_promise(promise, info)) ; else {
+    			if (dirty[0] & /*wrongAnswers*/ 256 && promise !== (promise = /*getTranslate*/ ctx[10](/*wrongAnswer*/ ctx[35].word)) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[39] = info.resolved;
+    				child_ctx[38] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
     		},
@@ -1212,14 +1172,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(166:6) {#each wrongAnswers as wrongAnswer}",
+    		source: "(168:6) {#each wrongAnswers as wrongAnswer}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (195:4) {#each pageRequestNumbers as pageRequestNumber}
+    // (197:4) {#each pageRequestNumbers as pageRequestNumber}
     function create_each_block_1(ctx) {
     	let label;
     	let input;
@@ -1232,7 +1192,7 @@ var app = (function () {
     	let path1;
     	let t1;
     	let span;
-    	let t2_value = /*pageRequestNumber*/ ctx[33] + "";
+    	let t2_value = /*pageRequestNumber*/ ctx[32] + "";
     	let t2;
     	let t3;
     	let t4;
@@ -1240,7 +1200,7 @@ var app = (function () {
     	let dispose;
 
     	function click_handler_2(...args) {
-    		return /*click_handler_2*/ ctx[29](/*pageRequestNumber*/ ctx[33], ...args);
+    		return /*click_handler_2*/ ctx[28](/*pageRequestNumber*/ ctx[32], ...args);
     	}
 
     	const block = {
@@ -1258,32 +1218,32 @@ var app = (function () {
     			t3 = text(" level");
     			t4 = space();
     			attr_dev(input, "type", "radio");
-    			attr_dev(input, "id", input_id_value = "rdo-" + /*pageRequestNumber*/ ctx[33]);
+    			attr_dev(input, "id", input_id_value = "rdo-" + /*pageRequestNumber*/ ctx[32]);
     			attr_dev(input, "name", "radio-grp");
-    			input.checked = input_checked_value = /*pageRequestNumber*/ ctx[33] === /*pageRequest*/ ctx[7];
-    			attr_dev(input, "class", "svelte-vas4q4");
-    			add_location(input, file, 196, 6, 5280);
+    			input.checked = input_checked_value = /*pageRequestNumber*/ ctx[32] === /*pageRequest*/ ctx[6];
+    			attr_dev(input, "class", "svelte-1grd79w");
+    			add_location(input, file, 198, 6, 5362);
     			attr_dev(circle, "cx", "10");
     			attr_dev(circle, "cy", "10");
     			attr_dev(circle, "r", "9");
-    			attr_dev(circle, "class", "svelte-vas4q4");
-    			add_location(circle, file, 204, 8, 5571);
+    			attr_dev(circle, "class", "svelte-1grd79w");
+    			add_location(circle, file, 206, 8, 5653);
     			attr_dev(path0, "d", "M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z");
-    			attr_dev(path0, "class", "inner svelte-vas4q4");
-    			add_location(path0, file, 205, 8, 5619);
+    			attr_dev(path0, "class", "inner svelte-1grd79w");
+    			add_location(path0, file, 207, 8, 5701);
     			attr_dev(path1, "d", "M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z");
-    			attr_dev(path1, "class", "outer svelte-vas4q4");
-    			add_location(path1, file, 209, 8, 5830);
+    			attr_dev(path1, "class", "outer svelte-1grd79w");
+    			add_location(path1, file, 211, 8, 5912);
     			attr_dev(svg, "width", "20px");
     			attr_dev(svg, "height", "20px");
     			attr_dev(svg, "viewBox", "0 0 20 20");
-    			attr_dev(svg, "class", "svelte-vas4q4");
-    			add_location(svg, file, 203, 6, 5510);
-    			attr_dev(span, "class", "svelte-vas4q4");
-    			add_location(span, file, 214, 6, 6110);
-    			attr_dev(label, "for", label_for_value = "rdo-" + /*pageRequestNumber*/ ctx[33]);
-    			attr_dev(label, "class", "btn-radio svelte-vas4q4");
-    			add_location(label, file, 195, 4, 5213);
+    			attr_dev(svg, "class", "svelte-1grd79w");
+    			add_location(svg, file, 205, 6, 5592);
+    			attr_dev(span, "class", "svelte-1grd79w");
+    			add_location(span, file, 216, 6, 6192);
+    			attr_dev(label, "for", label_for_value = "rdo-" + /*pageRequestNumber*/ ctx[32]);
+    			attr_dev(label, "class", "btn-radio svelte-1grd79w");
+    			add_location(label, file, 197, 4, 5295);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, label, anchor);
@@ -1304,7 +1264,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*pageRequest*/ 128 && input_checked_value !== (input_checked_value = /*pageRequestNumber*/ ctx[33] === /*pageRequest*/ ctx[7])) {
+    			if (dirty[0] & /*pageRequest*/ 64 && input_checked_value !== (input_checked_value = /*pageRequestNumber*/ ctx[32] === /*pageRequest*/ ctx[6])) {
     				prop_dev(input, "checked", input_checked_value);
     			}
     		},
@@ -1318,14 +1278,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(195:4) {#each pageRequestNumbers as pageRequestNumber}",
+    		source: "(197:4) {#each pageRequestNumbers as pageRequestNumber}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (224:6) {#if wordTranslate && !isRecognizing}
+    // (226:6) {#if wordTranslate && !isRecognizing}
     function create_if_block_1(ctx) {
     	let span;
     	let t;
@@ -1334,7 +1294,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			t = text(/*wordTranslate*/ ctx[2]);
-    			add_location(span, file, 224, 6, 6356);
+    			add_location(span, file, 226, 6, 6438);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -1352,14 +1312,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(224:6) {#if wordTranslate && !isRecognizing}",
+    		source: "(226:6) {#if wordTranslate && !isRecognizing}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (226:12) {#if isRecognizing}
+    // (228:12) {#if isRecognizing}
     function create_if_block(ctx) {
     	let span;
     	let t;
@@ -1368,7 +1328,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			t = text(/*speakResult*/ ctx[3]);
-    			add_location(span, file, 226, 6, 6423);
+    			add_location(span, file, 228, 6, 6505);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -1386,25 +1346,25 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(226:12) {#if isRecognizing}",
+    		source: "(228:12) {#if isRecognizing}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (232:4) {#each words as word}
+    // (234:4) {#each words as word}
     function create_each_block(ctx) {
     	let li;
     	let span;
     	let t1;
     	let div;
     	let p0;
-    	let t2_value = /*word*/ ctx[30].word + "";
+    	let t2_value = /*word*/ ctx[29].word + "";
     	let t2;
     	let t3;
     	let p1;
-    	let t4_value = /*word*/ ctx[30].transcription + "";
+    	let t4_value = /*word*/ ctx[29].transcription + "";
     	let t4;
     	let t5;
     	let dispose;
@@ -1422,16 +1382,16 @@ var app = (function () {
     			p1 = element("p");
     			t4 = text(t4_value);
     			t5 = space();
-    			add_location(span, file, 233, 6, 6628);
-    			attr_dev(p0, "class", "svelte-vas4q4");
-    			add_location(p0, file, 235, 8, 6694);
-    			attr_dev(p1, "class", "svelte-vas4q4");
-    			add_location(p1, file, 236, 8, 6721);
-    			attr_dev(div, "class", "main_word-text svelte-vas4q4");
-    			add_location(div, file, 234, 6, 6657);
-    			attr_dev(li, "class", "main_word svelte-vas4q4");
-    			toggle_class(li, "active", /*word*/ ctx[30].active);
-    			add_location(li, file, 232, 4, 6539);
+    			add_location(span, file, 235, 6, 6710);
+    			attr_dev(p0, "class", "svelte-1grd79w");
+    			add_location(p0, file, 237, 8, 6776);
+    			attr_dev(p1, "class", "svelte-1grd79w");
+    			add_location(p1, file, 238, 8, 6803);
+    			attr_dev(div, "class", "main_word-text svelte-1grd79w");
+    			add_location(div, file, 236, 6, 6739);
+    			attr_dev(li, "class", "main_word svelte-1grd79w");
+    			toggle_class(li, "active", /*word*/ ctx[29].active);
+    			add_location(li, file, 234, 4, 6621);
     		},
     		m: function mount(target, anchor, remount) {
     			insert_dev(target, li, anchor);
@@ -1450,7 +1410,7 @@ var app = (function () {
     				li,
     				"click",
     				function () {
-    					if (is_function(/*onClickWord*/ ctx[12](/*word*/ ctx[30]))) /*onClickWord*/ ctx[12](/*word*/ ctx[30]).apply(this, arguments);
+    					if (is_function(/*onClickWord*/ ctx[11](/*word*/ ctx[29]))) /*onClickWord*/ ctx[11](/*word*/ ctx[29]).apply(this, arguments);
     				},
     				false,
     				false,
@@ -1459,11 +1419,11 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*words*/ 2 && t2_value !== (t2_value = /*word*/ ctx[30].word + "")) set_data_dev(t2, t2_value);
-    			if (dirty[0] & /*words*/ 2 && t4_value !== (t4_value = /*word*/ ctx[30].transcription + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*words*/ 2 && t2_value !== (t2_value = /*word*/ ctx[29].word + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*words*/ 2 && t4_value !== (t4_value = /*word*/ ctx[29].transcription + "")) set_data_dev(t4, t4_value);
 
     			if (dirty[0] & /*words*/ 2) {
-    				toggle_class(li, "active", /*word*/ ctx[30].active);
+    				toggle_class(li, "active", /*word*/ ctx[29].active);
     			}
     		},
     		d: function destroy(detaching) {
@@ -1476,7 +1436,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(232:4) {#each words as word}",
+    		source: "(234:4) {#each words as word}",
     		ctx
     	});
 
@@ -1485,30 +1445,28 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let t0;
-    	let t1;
     	let header;
     	let div0;
-    	let t2;
+    	let t1;
     	let main;
     	let div2;
     	let img;
     	let img_src_value;
-    	let t3;
+    	let t2;
     	let div1;
+    	let t3;
     	let t4;
-    	let t5;
     	let ul;
-    	let t6;
+    	let t5;
     	let footer;
     	let button0;
-    	let t8;
+    	let t7;
     	let button1;
-    	let t10;
+    	let t9;
     	let button2;
     	let dispose;
-    	let if_block0 = /*isStartOpen*/ ctx[5] && create_if_block_5(ctx);
-    	let if_block1 = /*isResultOpen*/ ctx[6] && create_if_block_2(ctx);
-    	let each_value_1 = /*pageRequestNumbers*/ ctx[10];
+    	let if_block0 = /*isResultOpen*/ ctx[5] && create_if_block_2(ctx);
+    	let each_value_1 = /*pageRequestNumbers*/ ctx[9];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -1516,8 +1474,8 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
-    	let if_block2 = /*wordTranslate*/ ctx[2] && !/*isRecognizing*/ ctx[4] && create_if_block_1(ctx);
-    	let if_block3 = /*isRecognizing*/ ctx[4] && create_if_block(ctx);
+    	let if_block1 = /*wordTranslate*/ ctx[2] && !/*isRecognizing*/ ctx[4] && create_if_block_1(ctx);
+    	let if_block2 = /*isRecognizing*/ ctx[4] && create_if_block(ctx);
     	let each_value = /*words*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -1530,8 +1488,6 @@ var app = (function () {
     		c: function create() {
     			if (if_block0) if_block0.c();
     			t0 = space();
-    			if (if_block1) if_block1.c();
-    			t1 = space();
     			header = element("header");
     			div0 = element("div");
 
@@ -1539,55 +1495,55 @@ var app = (function () {
     				each_blocks_1[i].c();
     			}
 
-    			t2 = space();
+    			t1 = space();
     			main = element("main");
     			div2 = element("div");
     			img = element("img");
-    			t3 = space();
+    			t2 = space();
     			div1 = element("div");
+    			if (if_block1) if_block1.c();
+    			t3 = space();
     			if (if_block2) if_block2.c();
     			t4 = space();
-    			if (if_block3) if_block3.c();
-    			t5 = space();
     			ul = element("ul");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t6 = space();
+    			t5 = space();
     			footer = element("footer");
     			button0 = element("button");
     			button0.textContent = "Restart";
-    			t8 = space();
+    			t7 = space();
     			button1 = element("button");
     			button1.textContent = "Speak please";
-    			t10 = space();
+    			t9 = space();
     			button2 = element("button");
     			button2.textContent = "Results";
-    			attr_dev(div0, "class", "cntr svelte-vas4q4");
-    			add_location(div0, file, 193, 2, 5138);
-    			attr_dev(header, "class", "svelte-vas4q4");
-    			add_location(header, file, 192, 0, 5127);
+    			attr_dev(div0, "class", "cntr svelte-1grd79w");
+    			add_location(div0, file, 195, 2, 5220);
+    			attr_dev(header, "class", "svelte-1grd79w");
+    			add_location(header, file, 194, 0, 5209);
     			if (img.src !== (img_src_value = /*imgSrc*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Word picture");
-    			attr_dev(img, "class", "svelte-vas4q4");
-    			add_location(img, file, 221, 4, 6235);
-    			attr_dev(div1, "class", "main__text svelte-vas4q4");
-    			add_location(div1, file, 222, 4, 6281);
-    			attr_dev(div2, "class", "main__pic-text svelte-vas4q4");
-    			add_location(div2, file, 220, 2, 6202);
-    			attr_dev(ul, "class", "main__words svelte-vas4q4");
-    			add_location(ul, file, 230, 2, 6484);
-    			add_location(main, file, 219, 0, 6193);
-    			attr_dev(button0, "class", "myButton svelte-vas4q4");
-    			add_location(button0, file, 244, 2, 6812);
-    			attr_dev(button1, "class", "myButton svelte-vas4q4");
-    			add_location(button1, file, 245, 2, 6888);
-    			attr_dev(button2, "class", "myButton svelte-vas4q4");
-    			add_location(button2, file, 246, 2, 6969);
-    			attr_dev(footer, "class", "svelte-vas4q4");
-    			add_location(footer, file, 243, 0, 6801);
+    			attr_dev(img, "class", "svelte-1grd79w");
+    			add_location(img, file, 223, 4, 6317);
+    			attr_dev(div1, "class", "main__text svelte-1grd79w");
+    			add_location(div1, file, 224, 4, 6363);
+    			attr_dev(div2, "class", "main__pic-text svelte-1grd79w");
+    			add_location(div2, file, 222, 2, 6284);
+    			attr_dev(ul, "class", "main__words svelte-1grd79w");
+    			add_location(ul, file, 232, 2, 6566);
+    			add_location(main, file, 221, 0, 6275);
+    			attr_dev(button0, "class", "myButton svelte-1grd79w");
+    			add_location(button0, file, 246, 2, 6894);
+    			attr_dev(button1, "class", "myButton svelte-1grd79w");
+    			add_location(button1, file, 247, 2, 6970);
+    			attr_dev(button2, "class", "myButton svelte-1grd79w");
+    			add_location(button2, file, 248, 2, 7051);
+    			attr_dev(footer, "class", "svelte-1grd79w");
+    			add_location(footer, file, 245, 0, 6883);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1595,8 +1551,6 @@ var app = (function () {
     		m: function mount(target, anchor, remount) {
     			if (if_block0) if_block0.m(target, anchor);
     			insert_dev(target, t0, anchor);
-    			if (if_block1) if_block1.m(target, anchor);
-    			insert_dev(target, t1, anchor);
     			insert_dev(target, header, anchor);
     			append_dev(header, div0);
 
@@ -1604,43 +1558,43 @@ var app = (function () {
     				each_blocks_1[i].m(div0, null);
     			}
 
-    			insert_dev(target, t2, anchor);
+    			insert_dev(target, t1, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, div2);
     			append_dev(div2, img);
-    			append_dev(div2, t3);
+    			append_dev(div2, t2);
     			append_dev(div2, div1);
+    			if (if_block1) if_block1.m(div1, null);
+    			append_dev(div1, t3);
     			if (if_block2) if_block2.m(div1, null);
-    			append_dev(div1, t4);
-    			if (if_block3) if_block3.m(div1, null);
-    			append_dev(main, t5);
+    			append_dev(main, t4);
     			append_dev(main, ul);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(ul, null);
     			}
 
-    			insert_dev(target, t6, anchor);
+    			insert_dev(target, t5, anchor);
     			insert_dev(target, footer, anchor);
     			append_dev(footer, button0);
-    			append_dev(footer, t8);
+    			append_dev(footer, t7);
     			append_dev(footer, button1);
-    			append_dev(footer, t10);
+    			append_dev(footer, t9);
     			append_dev(footer, button2);
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(button0, "click", /*onResetRecognition*/ ctx[14], false, false, false),
-    				listen_dev(button1, "click", /*onStartRecognition*/ ctx[13], false, false, false),
-    				listen_dev(button2, "click", /*onShowResults*/ ctx[15], false, false, false)
+    				listen_dev(button0, "click", /*onResetRecognition*/ ctx[13], false, false, false),
+    				listen_dev(button1, "click", /*onStartRecognition*/ ctx[12], false, false, false),
+    				listen_dev(button2, "click", /*onShowResults*/ ctx[14], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (/*isStartOpen*/ ctx[5]) {
+    			if (/*isResultOpen*/ ctx[5]) {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_5(ctx);
+    					if_block0 = create_if_block_2(ctx);
     					if_block0.c();
     					if_block0.m(t0.parentNode, t0);
     				}
@@ -1649,21 +1603,8 @@ var app = (function () {
     				if_block0 = null;
     			}
 
-    			if (/*isResultOpen*/ ctx[6]) {
-    				if (if_block1) {
-    					if_block1.p(ctx, dirty);
-    				} else {
-    					if_block1 = create_if_block_2(ctx);
-    					if_block1.c();
-    					if_block1.m(t1.parentNode, t1);
-    				}
-    			} else if (if_block1) {
-    				if_block1.d(1);
-    				if_block1 = null;
-    			}
-
-    			if (dirty[0] & /*pageRequestNumbers, pageRequest, onClickLevelOfWords*/ 132224) {
-    				each_value_1 = /*pageRequestNumbers*/ ctx[10];
+    			if (dirty[0] & /*pageRequestNumbers, pageRequest, onClickLevelOfWords*/ 33344) {
+    				each_value_1 = /*pageRequestNumbers*/ ctx[9];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -1691,32 +1632,32 @@ var app = (function () {
     			}
 
     			if (/*wordTranslate*/ ctx[2] && !/*isRecognizing*/ ctx[4]) {
+    				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+    				} else {
+    					if_block1 = create_if_block_1(ctx);
+    					if_block1.c();
+    					if_block1.m(div1, t3);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+
+    			if (/*isRecognizing*/ ctx[4]) {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
-    					if_block2 = create_if_block_1(ctx);
+    					if_block2 = create_if_block(ctx);
     					if_block2.c();
-    					if_block2.m(div1, t4);
+    					if_block2.m(div1, null);
     				}
     			} else if (if_block2) {
     				if_block2.d(1);
     				if_block2 = null;
     			}
 
-    			if (/*isRecognizing*/ ctx[4]) {
-    				if (if_block3) {
-    					if_block3.p(ctx, dirty);
-    				} else {
-    					if_block3 = create_if_block(ctx);
-    					if_block3.c();
-    					if_block3.m(div1, null);
-    				}
-    			} else if (if_block3) {
-    				if_block3.d(1);
-    				if_block3 = null;
-    			}
-
-    			if (dirty[0] & /*words, onClickWord*/ 4098) {
+    			if (dirty[0] & /*words, onClickWord*/ 2050) {
     				each_value = /*words*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -1745,16 +1686,14 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (if_block0) if_block0.d(detaching);
     			if (detaching) detach_dev(t0);
-    			if (if_block1) if_block1.d(detaching);
-    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(header);
     			destroy_each(each_blocks_1, detaching);
-    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(main);
+    			if (if_block1) if_block1.d();
     			if (if_block2) if_block2.d();
-    			if (if_block3) if_block3.d();
     			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(t5);
     			if (detaching) detach_dev(footer);
     			run_all(dispose);
     		}
@@ -1778,8 +1717,7 @@ var app = (function () {
     	let wordTranslate = "";
     	let speakResult = "";
     	let isRecognizing = false;
-    	let isStartOpen = false;
-    	let isResultOpen = true;
+    	let isResultOpen = false;
     	let pageRequest = 0;
     	let groupRequest = 0;
     	let pageRequestNumbers = [0, 1, 2, 3, 4, 5];
@@ -1792,6 +1730,10 @@ var app = (function () {
     		if (index !== -1) {
     			$$invalidate(0, imgSrc = words[index].image);
     			$$invalidate(1, words[index].active = true, words);
+    		}
+
+    		if (words.every(element => element.active)) {
+    			onShowResults();
     		}
     	};
 
@@ -1860,6 +1802,7 @@ var app = (function () {
     	const onStartRecognition = () => {
     		recognition.start();
     		$$invalidate(4, isRecognizing = true);
+    		$$invalidate(0, imgSrc = firstPicture);
     	};
 
     	const resetRecognition = () => {
@@ -1875,24 +1818,27 @@ var app = (function () {
 
     	const onShowResults = () => {
     		resetRecognition();
-    		$$invalidate(6, isResultOpen = true);
-    	};
-
-    	const onStartClick = () => {
-    		$$invalidate(5, isStartOpen = false);
+    		$$invalidate(5, isResultOpen = true);
+    		document.body.style.overflow = "hidden";
     	};
 
     	const onClickLevelOfWords = number => {
     		resetData();
-    		$$invalidate(7, pageRequest = number);
+    		$$invalidate(6, pageRequest = number);
     		setWords(pageRequest, groupRequest);
     	};
 
     	const onNewGameStart = () => {
-    		$$invalidate(6, isResultOpen = false);
+    		$$invalidate(5, isResultOpen = false);
     		resetData();
     		groupRequest++;
     		setWords(pageRequest, groupRequest);
+    		document.body.style.overflow = "auto";
+    	};
+
+    	const onClickReturn = () => {
+    		$$invalidate(5, isResultOpen = false);
+    		document.body.style.overflow = "auto";
     	};
 
     	setWords(pageRequest, groupRequest);
@@ -1904,7 +1850,7 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("App", $$slots, []);
-    	const click_handler = () => $$invalidate(6, isResultOpen = false);
+    	const click_handler = () => onClickReturn();
     	const click_handler_1 = () => onNewGameStart();
     	const click_handler_2 = pageRequestNumber => onClickLevelOfWords(pageRequestNumber);
 
@@ -1915,7 +1861,6 @@ var app = (function () {
     		wordTranslate,
     		speakResult,
     		isRecognizing,
-    		isStartOpen,
     		isResultOpen,
     		pageRequest,
     		groupRequest,
@@ -1931,9 +1876,9 @@ var app = (function () {
     		resetRecognition,
     		onResetRecognition,
     		onShowResults,
-    		onStartClick,
     		onClickLevelOfWords,
     		onNewGameStart,
+    		onClickReturn,
     		correctAnswers,
     		wrongAnswers
     	});
@@ -1945,13 +1890,12 @@ var app = (function () {
     		if ("wordTranslate" in $$props) $$invalidate(2, wordTranslate = $$props.wordTranslate);
     		if ("speakResult" in $$props) $$invalidate(3, speakResult = $$props.speakResult);
     		if ("isRecognizing" in $$props) $$invalidate(4, isRecognizing = $$props.isRecognizing);
-    		if ("isStartOpen" in $$props) $$invalidate(5, isStartOpen = $$props.isStartOpen);
-    		if ("isResultOpen" in $$props) $$invalidate(6, isResultOpen = $$props.isResultOpen);
-    		if ("pageRequest" in $$props) $$invalidate(7, pageRequest = $$props.pageRequest);
+    		if ("isResultOpen" in $$props) $$invalidate(5, isResultOpen = $$props.isResultOpen);
+    		if ("pageRequest" in $$props) $$invalidate(6, pageRequest = $$props.pageRequest);
     		if ("groupRequest" in $$props) groupRequest = $$props.groupRequest;
-    		if ("pageRequestNumbers" in $$props) $$invalidate(10, pageRequestNumbers = $$props.pageRequestNumbers);
-    		if ("correctAnswers" in $$props) $$invalidate(8, correctAnswers = $$props.correctAnswers);
-    		if ("wrongAnswers" in $$props) $$invalidate(9, wrongAnswers = $$props.wrongAnswers);
+    		if ("pageRequestNumbers" in $$props) $$invalidate(9, pageRequestNumbers = $$props.pageRequestNumbers);
+    		if ("correctAnswers" in $$props) $$invalidate(7, correctAnswers = $$props.correctAnswers);
+    		if ("wrongAnswers" in $$props) $$invalidate(8, wrongAnswers = $$props.wrongAnswers);
     	};
 
     	let correctAnswers;
@@ -1963,11 +1907,11 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty[0] & /*words*/ 2) {
-    			 $$invalidate(8, correctAnswers = words.filter(element => element.active));
+    			 $$invalidate(7, correctAnswers = words.filter(element => element.active));
     		}
 
     		if ($$self.$$.dirty[0] & /*words*/ 2) {
-    			 $$invalidate(9, wrongAnswers = words.filter(element => !element.active));
+    			 $$invalidate(8, wrongAnswers = words.filter(element => !element.active));
     		}
     	};
 
@@ -1977,7 +1921,6 @@ var app = (function () {
     		wordTranslate,
     		speakResult,
     		isRecognizing,
-    		isStartOpen,
     		isResultOpen,
     		pageRequest,
     		correctAnswers,
@@ -1988,9 +1931,9 @@ var app = (function () {
     		onStartRecognition,
     		onResetRecognition,
     		onShowResults,
-    		onStartClick,
     		onClickLevelOfWords,
     		onNewGameStart,
+    		onClickReturn,
     		groupRequest,
     		recognition,
     		firstPicture,
