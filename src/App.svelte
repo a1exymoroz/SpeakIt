@@ -14,7 +14,7 @@
   recognition.lang = 'en-US';
   recognition.continuous = true;
   const checkWord = (word) => {
-    const index = words.findIndex((element) => element.word === word);
+    const index = words.findIndex((element) => element.word.toLowerCase() === word);
     if (index !== -1) {
       imgSrc = words[index].image;
       words[index].active = true;
@@ -39,15 +39,17 @@
     const json = await res.json();
     const dataUrl = 'https://raw.githubusercontent.com/a1exymoroz/rslang-data/master/data/';
 
-    words = json.map((element) => {
-      const imageSrc = element.image.split('/');
-      return {
-        word: element.word,
-        image: dataUrl + imageSrc[imageSrc.length - 1],
-        active: false,
-        transcription: element.transcription,
-      };
-    });
+    words = json
+      .map((element) => {
+        const imageSrc = element.image.split('/');
+        return {
+          word: element.word,
+          image: dataUrl + imageSrc[imageSrc.length - 1],
+          active: false,
+          transcription: element.transcription,
+        };
+      })
+      .slice(0, 10);
   };
 
   const getTranslate = async (word) => {
