@@ -11,6 +11,7 @@
   let pageRequestNumbers = [0, 1, 2, 3, 4, 5];
 
   const recognition = new webkitSpeechRecognition();
+  recognition.lang = 'en-US';
   recognition.continuous = true;
   const checkWord = (word) => {
     const index = words.findIndex((element) => element.word === word);
@@ -26,7 +27,7 @@
   recognition.onresult = function (event) {
     for (let i = event.resultIndex; i < event.results.length; i += 1) {
       if (event.results[i].isFinal) {
-        speakResult = event.results[i][0].transcript.trim();
+        speakResult = event.results[i][0].transcript.toLowerCase().trim();
         checkWord(speakResult);
       }
     }
